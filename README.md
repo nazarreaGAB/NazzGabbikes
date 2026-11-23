@@ -8,7 +8,7 @@ This is a demo only. It has no payment processing, customer accounts, or persona
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/YOUR-GITHUB-USERNAME/NazzGabbikes)
 
-> Replace `YOUR-GITHUB-USERNAME` in the badge link above with your GitHub username (edit this README on GitHub with the pencil icon).
+> Replace `nazarreaGAB` in the badge link above with your GitHub username (edit this README on GitHub with the pencil icon).
 
 ## Start Here (GitHub Codespaces, no installs)
 
