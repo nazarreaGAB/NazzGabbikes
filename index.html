@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NazzGabbikes | Bike Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">N</span><span class="brand-name">NazzGabbikes</span></div>
+    <div id="status-pill" class="pill pill-wait" title="Result of GET /api/status">Checking COBOL...</div>
+  </header>
+
+  <div id="preview-banner" class="banner" hidden>
+    Browser-only preview: checkout is disabled. Run <code>npm start</code> in Codespaces for the real COBOL checkout.
+  </div>
+
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Bikes &middot; Gear &middot; Good rides</p>
+      <h1>Ride more.<br>Worry less.</h1>
+      <p class="sub">Pick your bike, add it to the basket, and place your order. The totals are calculated by a COBOL program.</p>
+    </section>
+
+    <section class="stats">
+      <div><span id="items-sold" class="stat-num">0</span><span class="stat-label">Total items sold</span></div>
+      <p class="hint">Try a checkout, then reset stock to start again.</p>
+    </section>
+
+    <div class="grid">
+      <section class="shelf" aria-labelledby="shelf-title">
+        <div class="section-head">
+          <div>
+            <h2 id="shelf-title">In the shop</h2>
+            <p class="caps">Six ride-ready picks</p>
+          </div>
+          <button id="reset-btn" class="btn btn-ghost" type="button">Reset stock</button>
+        </div>
+        <div id="product-list" class="product-list" aria-live="polite"></div>
+      </section>
+
+      <aside class="basket" aria-labelledby="basket-title">
+        <div class="basket-head">
+          <h2 id="basket-title">Your basket</h2>
+          <span id="basket-count" class="count">0</span>
+        </div>
+        <div id="basket-items" class="basket-items"></div>
+        <div class="total-row">
+          <span>Estimated total</span>
+          <strong id="basket-total">&#8369;0.00</strong>
+        </div>
+        <button id="order-btn" class="btn btn-primary" type="button" disabled>Place order <span aria-hidden="true">&rarr;</span></button>
+        <p class="note">Adding to the basket does not reduce stock. The final total is calculated by COBOL when you place the order.</p>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </aside>
+    </div>
+
+    <section id="receipt" class="receipt" hidden aria-labelledby="receipt-title">
+      <h2 id="receipt-title">Order confirmed</h2>
+      <p class="caps">Calculated by the COBOL checkout</p>
+      <table>
+        <thead><tr><th>Item</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Line total</th></tr></thead>
+        <tbody id="receipt-body"></tbody>
+        <tfoot><tr><td colspan="3">Order total</td><td id="receipt-total" class="num"></td></tr></tfoot>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Browser UI &rarr; Node.js API &rarr; compiled GnuCOBOL checkout &middot; Demo only: no payments, accounts or personal data.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

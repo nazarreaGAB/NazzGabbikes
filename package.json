@@ -1,0 +1,14 @@
+{
+  "name": "nazzgabbikes",
+  "version": "1.0.0",
+  "description": "NazzGabbikes bike shop: Browser UI -> Node.js API -> compiled GnuCOBOL checkout",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build:cobol": "bash scripts/build-cobol.sh"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
